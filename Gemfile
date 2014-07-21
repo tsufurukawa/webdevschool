@@ -29,6 +29,7 @@ group :production do
 end
 
 gem 'slim-rails'
+gem 'rest-client'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
