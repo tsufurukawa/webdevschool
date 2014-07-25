@@ -1,9 +1,9 @@
-- @promotions.each do |promotion|
-  h3= promotion["title"]
-  p= promotion["description"]
-  p id: #{promotion["id"]}
-  = image_tag promotion["photo_url"]
-  h4 Price: #{promotion["price"]}
-  h4 Original Price: #{promotion["original_price"]}
-
-= @promotions
+.promotions.container
+  ul.col-2
+    - @promotions.each do |promotion|
+      li
+        h5.title= promotion["title"]
+        p.description= promotion["description"]
+        = image_tag promotion["photo_url"]
+        span.label.label-primary.pull-right Price: $#{promotion["price"]}
+        span.label.label-danger.pull-right Original Price: $#{promotion["original_price"]}

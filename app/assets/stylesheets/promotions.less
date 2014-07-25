@@ -1,0 +1,85 @@
+.promotions.container {
+  ul {
+    list-style: none;
+    margin: 0 -1.25%;
+
+    li {
+      display: inline-block;
+      padding: 10px;
+      margin: 0 1.25% 2.5% 1.25%;
+      background: #F8E8D9;
+      border: 2px solid #3D1F00;
+      font-size: 16px;
+      font-size: 1rem;
+      vertical-align: top;
+      box-shadow: 0 0 5px #ddd;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 10px;
+        border-radius: 10px;
+      }
+
+      h4 {
+        margin: 0 0 5px;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 2.2rem;
+      }
+
+      .description {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      .title, .description {
+        text-align: center;
+      }
+
+      span.label {
+        font-size: 1.2rem;
+        margin: 0 5px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      span.label-danger {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+ul.col-2 li {
+  width: 47.5%;
+}
+
+ul.col-3 li {
+  width: 30.83%;
+}
+
+ul.col-4 li {
+  width: 22.5%;
+}
+
+@media (max-width: 680px) {
+  ul li {
+    display: block;
+    width: 100% !important;
+    margin: 0;
+
+    img {
+      display: block;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 95%;
+    }
+  }
+}
+
