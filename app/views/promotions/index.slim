@@ -1,10 +1,4 @@
 .promotions.container
   ul.col-2
     - @promotions.each do |promotion|
-      li
-        h5.title= promotion["title"]
-        p.description= promotion["description"]
-        = link_to promotion_path(promotion["id"]) do
-          = image_tag promotion["photo_url"]
-        span.label.label-primary.pull-right Price: $#{promotion["price"]}
-        span.label.label-danger.pull-right Original Price: $#{promotion["original_price"]}
+        = render "promotion", promotion: promotion
