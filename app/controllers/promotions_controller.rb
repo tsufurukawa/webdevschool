@@ -7,6 +7,6 @@ class PromotionsController < ApplicationController
   def show
     response = RestClient.get "http://onlineschoolapi.apiary-mock.com/api/v0/promotions"
     promotions = JSON.parse(response)["data"]
-    @promotions = promotions.select { |promotion| promotion["id"] == params[:id]}
+    @promotion = promotions.select { |promotion| promotion["id"] == params[:id]}.first
   end
 end

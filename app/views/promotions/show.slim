@@ -1,10 +1,13 @@
-.promotions.container
-  ul.col-2
-    - @promotions.each do |promotion|
-      li
-        h5.title= promotion["title"]
-        p.description= promotion["description"]
-        = link_to promotion_path(promotion["id"]) do
-          = image_tag promotion["photo_url"]
-        span.label.label-primary.pull-right Price: #{display_course_price(promotion["price"])}
-        span.label.label-danger.pull-right Original Price: #{display_course_price(promotion["original_price"])}
+.promotions-show.container
+  .jumbotron
+    h2.title.text-danger= @promotion["title"]
+    .row
+      .col-md-8
+        = image_tag @promotion["photo_url"]
+      .col-md-4
+        p.description
+          = @promotion["description"]
+        .label-group.pull-right
+          span.label.label-danger.box-shadow-danger #{display_course_price(@promotion["original_price"])}
+          span.label.label-primary #{display_course_price(@promotion["price"])}
+          
