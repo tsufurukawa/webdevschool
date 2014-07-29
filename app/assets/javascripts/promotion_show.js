@@ -6,6 +6,11 @@ $(document).ready(function() {
   var $price = $('span.label-primary').text();
   var $caption = $('<h2 class="caption">/h2>').text($price);
 
+  $button.addClass('btn webappcamp purchase');
+  $button.attr('data-promotion-id', $('input#id').val());
+  $button.attr('data-title', $('h2.title').text());
+  $button.attr('data-amount', $('input#price').val());
+
   $content.append($button);
   $content.append($line);
   $content.append($caption);
@@ -18,4 +23,3 @@ $(document).ready(function() {
     $(overlay).hide();
   });
 });
-

@@ -6,6 +6,8 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    script src="https://checkout.stripe.com/checkout.js"
+    script id='jsStripePurchaser' src='http://assets.webappcamp.ws/js/stripe-purchaser.js' data-referred-by='vw9rpQ7gg7biSMJRjZTemg'
   body
     header
       = render 'shared/header'
