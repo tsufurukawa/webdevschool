@@ -2,12 +2,13 @@
   .jumbotron
     h2.title.text-danger= @promotion["title"]
     .row
-      .col-md-8
-        = image_tag @promotion["photo_url"]
-      .col-md-4
+      .col-md-8.col-lg-7
+        .image-container
+          = image_tag @promotion["photo_url"]
+      .col-md-4.col-lg-5
         p.description
           = @promotion["description"]
-        .label-group.pull-right
+          hr
+        .label-group
           span.label.label-danger.box-shadow-danger #{display_course_price(@promotion["original_price"])}
           span.label.label-primary #{display_course_price(@promotion["price"])}
-          
