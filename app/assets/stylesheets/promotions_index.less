@@ -1,12 +1,13 @@
+// General Content Styling
 .promotions.container {
   ul {
     list-style: none;
-    margin: 0 -1.25%;
+    margin: 0 -4%;
 
     li {
       display: inline-block;
       padding: 10px;
-      margin: 0 1.25% 2.5% 1.25%;
+      margin: 0 2% 4% 2%;
       background: #F8E8D9;
       border: 2px solid #3D1F00;
       font-size: 16px;
@@ -35,7 +36,7 @@
 
       .description {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       }
 
@@ -44,7 +45,7 @@
       }
 
       .discount {
-        color: red;
+        color: #d9534f;
         font-size: 2.0rem;
         text-align: center;
         font-weight: bold;
@@ -64,23 +65,33 @@
   }
 }
 
+// Responsive Grid System - use these classes to change number of columns
 ul.col-2 li {
-  width: 47.5%;
+  width: 46%;
 }
 
 ul.col-3 li {
-  width: 30.83%;
+  width: 29.333%;
 }
 
 ul.col-4 li {
-  width: 22.5%;
+  width: 21%;
 }
 
-@media (max-width: 680px) {
+// Media Query
+@media only screen and (max-width: 680px) {
+  .promotions ul {
+    width: 88% !important;
+    padding-left: 0;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
   .promotions ul li {
     display: block;
     width: 100% !important;
-    margin: 0;
+    margin-left: auto !important;
+    margin-right: auto !important;
 
     img {
       display: block;

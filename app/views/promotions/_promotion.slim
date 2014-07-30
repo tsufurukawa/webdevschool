@@ -1,5 +1,6 @@
 li 
-  h5.title= promotion["title"]
+  h5.title.text-danger
+    = link_to promotion["title"], promotion_path(promotion["id"])
   p.description= promotion["description"]
   = link_to promotion_path(promotion["id"]) do
     = image_tag promotion["photo_url"]

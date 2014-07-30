@@ -12,5 +12,5 @@
         .label-group
           span.label.label-danger.box-shadow-danger #{display_course_price(@promotion["original_price"])}
           span.label.label-primary #{display_course_price(@promotion["price"])}
-          = hidden_field_tag "id", @promotion["id"]
-          = hidden_field_tag "price", @promotion["price"]
+        = hidden_field_tag "id", @promotion["id"]
+        = hidden_field_tag "price", @promotion["price"]

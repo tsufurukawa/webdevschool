@@ -1,4 +1,1 @@
-class HomeController < ApplicationController
-  def about
-  end
-end
+class HomeController < ApplicationController; end
