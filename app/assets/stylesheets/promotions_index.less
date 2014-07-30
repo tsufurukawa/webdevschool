@@ -25,13 +25,17 @@
         border-radius: 10px;
       }
 
-      h4 {
-        margin: 0 0 5px;
-      }
-
       .title {
         text-align: center;
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+
+        a {
+          color: #d9534f;
+        }
+
+        a:hover {
+          color: #FF1919;
+        }
       }
 
       .description {
@@ -46,9 +50,10 @@
 
       .discount {
         color: #d9534f;
-        font-size: 2.0rem;
+        font-size: 2.5rem;
         text-align: center;
         font-weight: bold;
+        margin-top: 5px;
       }
 
       .label {
@@ -98,6 +103,18 @@ ul.col-4 li {
       margin-left: auto !important;
       margin-right: auto !important;
       width: 95%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .promotions {
+    h2.title {
+      font-size: 3.0rem !important;
+    }
+
+    .label {
+      font-size: 1.8rem !important;
     }
   }
 }

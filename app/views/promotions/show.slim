@@ -1,6 +1,6 @@
 .promotions-show.container
   .jumbotron
-    h2.title.text-danger= @promotion["title"]
+    h2.title= @promotion["title"]
     .row
       .col-md-8.col-lg-7
         .image-container
@@ -9,8 +9,9 @@
         p.description
           = @promotion["description"]
           hr
-        .label-group
-          span.label.label-danger.box-shadow-danger #{display_course_price(@promotion["original_price"])}
-          span.label.label-primary #{display_course_price(@promotion["price"])}
+        .price-group
+          span.original_price #{display_course_price(@promotion["original_price"])}
+          span.promotion_price #{display_course_price(@promotion["price"])}
+          p.discount= display_discount(@promotion["original_price"], @promotion["price"])
         = hidden_field_tag "id", @promotion["id"]
         = hidden_field_tag "price", @promotion["price"]

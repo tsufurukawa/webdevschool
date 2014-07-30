@@ -1,5 +1,5 @@
 li 
-  h5.title.text-danger
+  h2.title.text-danger
     = link_to promotion["title"], promotion_path(promotion["id"])
   p.description= promotion["description"]
   = link_to promotion_path(promotion["id"]) do
@@ -7,5 +7,4 @@ li
   .clearfix  
     span.label.label-primary.pull-right Price: #{display_course_price(promotion["price"])}
     span.label.label-danger.pull-right Original Price: #{display_course_price(promotion["original_price"])}
-  br
   .discount= display_discount(promotion["original_price"], promotion["price"])

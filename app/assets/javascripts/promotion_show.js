@@ -2,13 +2,13 @@
 $(document).ready(function() {
   var $overlay = $('<div id="overlay"></div>');
   var $content = $('<div class="content"></div>')
-  var $button = $('<button class="btn btn-info">Buy Now!!</button>');
+  var $button = $('<button class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span> Buy Now!!</button>');
   var $line = $('<hr>')
-  var $price = $('span.label-primary').text();
+  var $price = $('span.promotion_price').text();
   var $caption = $('<h2 class="caption">/h2>').text($price);
 
   // Add classes and data-attributes to purchase button for interacting with StripePurchaser widget
-  $button.addClass('btn webappcamp purchase');
+  $button.addClass('webappcamp purchase');
   $button.attr('data-promotion-id', $('input#id').val());
   $button.attr('data-title', $('h2.title').text());
   $button.attr('data-amount', $('input#price').val());

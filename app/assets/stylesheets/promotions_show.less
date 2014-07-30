@@ -2,6 +2,7 @@
 .promotions-show {
   h2.title {
     margin: -5px 0 20px 0;
+    color: #d9534f;
   }
 
   .image-container {
@@ -23,25 +24,35 @@
 
   p.description + hr {
     border: 1px solid #5C5C5C;
-    margin-bottom: 40px;
+    margin-bottom: -10px;
   }
 
-  .label-group {
+  .price-group {
     text-align: center;
-    margin-right: 20px;
-  }
 
-  .label {
-    font-size: 2.9rem;
-  }
+    span.original_price {
+      text-decoration: line-through;
+      font-size: 2.6rem;
+      color: grey;
+      margin-right: 10px;
+    }
 
-  .label-primary {
-    box-shadow:  inset 1px 2px 15px #1F3D99;
-  }
+    span.promotion_price {
+      font-size: 4.4rem;
+      color: #E60000;
+    }
 
-  .label-danger {
-    text-decoration: line-through;
-    box-shadow: inset 1px 2px 15px #A30000;
+    p.discount {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid blue;
+      border-radius: 10px;
+      color: #0000FF;
+      font-size: 2.2rem;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-style: italic;
+    }
   }
 }
 
@@ -82,23 +93,24 @@
 @media only screen and (max-width: 992px) {
   .promotions-show {
     h2.title {
-      font-size: 2.4rem;
+      font-size: 3.0rem;
     }
 
     p.description {
-      font-size: 2.0rem;
+      font-size: 2.3rem;
     }
 
     p.description + hr {
       display: none;
     }
 
-    .label-group {
+    .price-group {
       float: right;
+      margin-top: -20px;
     }
 
-    .label {
-      font-size: 2.3rem;
+    p.discount {
+      display: none;
     }
   }
 }
@@ -106,15 +118,24 @@
 @media only screen and (min-width: 1200px) {
   .promotions-show {
     h2.title {
-      font-size: 3.3rem;
+      font-size: 3.3rem !important;
     }
 
     p.description {
-      font-size: 3.2rem;
+      font-size: 3.2rem !important;
     }
 
-    .label-group {
-      text-align: center;
+    span.original_price {
+      font-size: 3.0rem !important;
+    }
+
+    span.promotion_price {
+      font-size: 4.8rem !important;
+    }
+
+    p.discount {
+      font-size: 2.8rem !important;
+      width: 50% !important;
     }
   }
 }
