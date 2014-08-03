@@ -11,6 +11,6 @@ class PromotionsController < ApplicationController
   private
 
   def restclient_response
-    response = RestClient.get "http://onlineschoolapi.apiary-mock.com/api/v0/promotions"
+    response = RestClient.get "http://sandbox.webappcamp.ws/api/v0/promotions"
   end
 end
