@@ -1,10 +1,9 @@
 class PromotionsController < ApplicationController
   def index
-    @promotions = WebappcampServices.parse_json
+    @promotions = WebappcampServices.promotions
   end
 
   def show
-    promotions = WebappcampServices.parse_json
-    @promotion = promotions.select { |promotion| promotion["id"] == params[:id] }.first
+    @promotion = WebappcampServices.promotion(params[:id])
   end
 end

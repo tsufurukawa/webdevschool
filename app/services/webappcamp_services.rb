@@ -1,11 +1,11 @@
 class WebappcampServices
-  def self.parse_json
-    JSON.parse(restclient_response)["data"]
+  def self.promotions
+    response = RestClient.get(ENV['PROMOTION_ENDPOINT'])
+    JSON.parse(response)["data"]
   end
 
-  private
-
-  def self.restclient_response
-    response = RestClient.get ENV['PROMOTION_ENDPOINT']
+  def self.promotion(id)
+    response = RestClient.get(ENV['PROMOTION_ENDPOINT'] + "/#{id}")
+    JSON.parse(response)["data"]
   end
 end
