@@ -1,16 +1,10 @@
 class PromotionsController < ApplicationController
   def index
-    @promotions = JSON.parse(restclient_response)["data"]
+    @promotions = WebappcampServices.parse_json
   end
 
   def show
-    promotions = JSON.parse(restclient_response)["data"]
+    promotions = WebappcampServices.parse_json
     @promotion = promotions.select { |promotion| promotion["id"] == params[:id] }.first
-  end
-
-  private
-
-  def restclient_response
-    response = RestClient.get "http://sandbox.webappcamp.ws/api/v0/promotions"
   end
 end
