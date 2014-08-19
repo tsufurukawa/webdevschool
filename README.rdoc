@@ -1,16 +1,17 @@
 == WebDevSchool
-WebDevSchool is an online school built on the Ruby on Rails framework. This application interfaces with Webapp Camp API (http://www.webappcamp.com), which is the actual website that serves the courses enlisted at our site.
+WebDevSchool is an online marketplace built on the Ruby on Rails framework where people can purchase courses/projects to learn in-demand skills in the field of programming and web development. This application interfaces with the Webapp Camp online school (http://www.webappcamp.com) - the actual website which serves the courses enlisted at our site.
 
-== How to Use
-Upon navigating to WebDevSchool, users will see a list of courses currently offered at Webbapp Camp. These courses can then be purchased via a credit card, after which, users will be redirected to the Webapp Camp site and prompted to log in with their Github account. The purchased courses will then be available under the "Projects" tab for the users to work through and complete.
+== How It Works
+Upon navigating to WebDevSchool, users will see a list of courses currently offered at Webbapp Camp. These courses can then be purchased with a credit card, after which, users will be redirected to the Webapp Camp site and prompted to log in with their Github accounts. The purchased courses will then be available under the "Projects" tab for the users to work through and complete.
 
 The deployed application can be seen here:
 
+http://webdevschool.herokuapp.com
 
-== Tools Used
+== Tools and Technologies Used
 This is a relatively simple application built from the ground up. Some of the noteable frontend and backend technologies used are:
 
 * Twitter Bootstrap - used primarily for designing the navbar, the grid layout, and the list of thumbnails on the home page.
 * Jquery - for injecting captions on thumbnails and dynamically creating a Purchase button - both of which are triggered by the "hover" event.
-* Stripe - the Checkout widget was used to process credit card payments.
+* Stripe - Checkout widget was used to process credit card payments.
 * Consuming 3rd Party API - accessed Webapp Camp's API endpoints for parsing and displaying data contained within the returned JSON objects.

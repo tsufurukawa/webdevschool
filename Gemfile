@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'pry'
+gem 'font-awesome-sass'
 
 group :doc do 
   gem 'sdoc', '~> 0.4.0'

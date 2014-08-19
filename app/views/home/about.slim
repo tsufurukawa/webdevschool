@@ -1,5 +1,16 @@
 .about.container
-  h2 About Us
-  p OnlineSchool is an online marketplace where people can share and purchase video courses to learn in-demand skills in the field of programming and web development.
+  h2 About
+  p
+    ' WebDevSchool is an online marketplace where people can purchase courses / projects to learn in-demand skills in the field of programming and web development. This application interfaces with the
+    = link_to "Webapp Camp", "http://www.webappcamp.com"
+    '  online school - the actual website which serves the courses enlisted at our site.
+  h2 Getting Started
+  p Upon navigating to the home page, you will see a list of courses currently offered at Webapp Camp. You may purchase these courses with a credit card, after which, you will be directed to the Webapp camp site and prompted to log in with your Github account. The purchased courses will then be available under the "Projects" tab for you to work through and complete.
+
   h2 Contact
-  = link_to "Facebook", "https://www.facebook.com/tsubasa.furukawa.7"
+  = link_to "https://www.facebook.com/tsubasa.furukawa.7" do
+    i class="fa fa-facebook-square fa-3x"
+  = link_to "https://github.com/tsufurukawa" do
+    i class="fa fa-github fa-3x"
+  = link_to "http://www.linkedin.com/pub/tsubasa-furukawa/90/a16/81a" do
+    i class="fa fa-linkedin-square fa-3x"
