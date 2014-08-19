@@ -2,46 +2,40 @@
 .promotions.container {
   ul {
     list-style: none;
-    margin: 0 -4%;
 
     li {
-      display: inline-block;
-      padding: 10px;
-      margin: 0 2% 4% 2%;
-      background: #F8E8D9;
-      border: 2px solid #3D1F00;
       font-size: 16px;
       font-size: 1rem;
-      vertical-align: top;
-      box-shadow: 0 0 5px #ddd;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
+
+      .img-container {
+        position: relative;
+      }
 
       img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 0 10px;
-        border-radius: 10px;
+        width: 100%;
+        height: 300px;
       }
 
       .title {
-        text-align: center;
-        font-size: 2.5rem;
+        font-size: 1.9rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
 
         a {
-          color: #d9534f;
+          color: #F5F5F5;
         }
 
         a:hover {
-          color: #FF1919;
+          color: white;
         }
       }
 
+      .caption {
+        background: #4C4C4C;
+      }
+
       .description {
-        text-align: center;
-        font-size: 1.7rem;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        display: none;
       }
 
       .title, .description {
@@ -49,72 +43,81 @@
       }
 
       .discount {
-        color: #d9534f;
+        color: #428bca;
         font-size: 2.5rem;
         text-align: center;
         font-weight: bold;
-        margin-top: 5px;
       }
 
-      .label {
-        font-size: 1.2rem;
-        margin: 0 5px;
-        padding: 10px;
-        border-radius: 5px;
-      }
+      .price-group {
+        text-align: center;
 
-      .label-danger {
-        text-decoration: line-through;
+        .original-price {
+          font-size: 1.9rem;
+          font-weight: bold;
+          color: #282828;
+          padding-right: 10px;
+          text-decoration: line-through;
+        }
+
+        .promotion-price {
+          font-size: 2.7rem;
+          color: #d9534f;
+        }
       }
     }
   }
 }
 
-// Responsive Grid System - use these classes to change number of columns
-ul.col-2 li {
-  width: 46%;
-}
+// Overlay and its content styling for showing purchase button with jquery
+.description-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  text-align: center;
 
-ul.col-3 li {
-  width: 29.333%;
-}
-
-ul.col-4 li {
-  width: 21%;
+  h2 {
+    color: white;
+    font-size: 2.0rem;
+    padding: 10px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
 }
 
 // Media Query
-@media only screen and (max-width: 680px) {
-  .promotions ul {
-    width: 88% !important;
-    padding-left: 0;
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
-
+@media (max-width: 992px) {
   .promotions ul li {
-    display: block;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  }
+}
 
+@media (max-width: 1200px) and (min-width: 992px) {
+  .promotions ul li {
+    .title {
+      font-size: 2.4rem !important;
+    }
     img {
-      display: block;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      width: 95%;
+      height: 350px !important;
     }
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .promotions {
-    h2.title {
-      font-size: 3.0rem !important;
+@media (max-width: 768px) {
+  .promotions ul li {
+    .thumbnail {
+      width: 435px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .label {
-      font-size: 1.8rem !important;
+    img {
+      height: auto !important;
+    }
+
+    .title {
+      font-size: 2.4rem !important;
     }
   }
 }

@@ -1,10 +1,13 @@
-li 
-  h2.title.text-danger
-    = link_to promotion["title"], promotion_path(promotion["id"])
-  p.description= promotion["description"]
-  = link_to promotion_path(promotion["id"]) do
-    = image_tag promotion["photo_url"]
-  .clearfix  
-    span.label.label-primary.pull-right Price: #{display_course_price(promotion["price"])}
-    span.label.label-danger.pull-right Original Price: #{display_course_price(promotion["original_price"])}
-  .discount= display_discount(promotion["original_price"], promotion["price"])
+li.col-sm-6.col-lg-4
+  .thumbnail
+    = link_to promotion_path(promotion["id"]) do
+      .img-container
+        = image_tag promotion["photo_url"]
+    .caption
+      h2.title.text-danger
+        = link_to promotion["title"], promotion_path(promotion["id"])
+      p.description= promotion["description"]
+      .price-group
+        span.original-price #{display_course_price(promotion["original_price"])}
+        span.promotion-price #{display_course_price(promotion["price"])}
+      .discount= display_discount(promotion["original_price"], promotion["price"])
