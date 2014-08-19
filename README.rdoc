@@ -11,7 +11,7 @@ http://webdevschool.herokuapp.com
 == Tools and Technologies Used
 This is a relatively simple application built from the ground up. Some of the noteable frontend and backend technologies used are:
 
-* Twitter Bootstrap - used primarily for designing the navbar, the grid layout, and the list of thumbnails on the home page.
+* Twitter Bootstrap 3.0 - used primarily for designing the navbar, the grid layout, and the list of thumbnails on the home page.
 * Jquery - for injecting captions on thumbnails and dynamically creating a Purchase button - both of which are triggered by the "hover" event.
 * Stripe - Checkout widget was used to process credit card payments.
 * Consuming 3rd Party API - accessed Webapp Camp's API endpoints for parsing and displaying data contained within the returned JSON objects.
